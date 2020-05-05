@@ -19,7 +19,7 @@ describe service('tomcat') do
   it { should_not be_running }
 end
 
-describe command('java -version') do
-  its(:stderr) { should match "[openjdk|java] version \"#{java_version}\"" }
-  its(:exit_status) { should eq 0 }
-end
+  # describe command('java -version') do
+  #   its(:stderr) { should match "[openjdk|java] version \"#{java_version}\"" }
+  #   its(:exit_status) { should eq 0 }
+  # end

@@ -150,7 +150,7 @@ aws-java aws-author aws-publish aws-dispatcher: stage config
 	$(eval COMPONENT := $(shell echo $@ | sed -e 's/^aws-//g'))
 	PACKER_LOG_PATH=logs/packer-$@.log \
 		PACKER_LOG=1 \
-		packer build \
+		packer build  \
 		$(VAR_PARAMS) \
 		-var-file=conf/packer/vars/components/$(COMPONENT).json \
 		-var 'version=$(version)' \
